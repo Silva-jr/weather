@@ -128,12 +128,12 @@
       &-right-text {
         display: flex;
         align-items: center;
-        //gap: 4rem;
+        width: 100%;
         h2 {
           font-size: 2rem;
         }
         input[type="text"] {
-          width: 60%;
+          width: 80%;
           padding: 8px 12px;
           margin: 8px 0;
           display: inline !important;

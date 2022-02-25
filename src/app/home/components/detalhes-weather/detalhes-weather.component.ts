@@ -12,7 +12,6 @@ import * as moment from 'moment-timezone';
 })
 export class DetalhesWeatherComponent {
   @Input() dailyWeather: DailyWeather;
-  @Input() timeZone: string;
   @Input() unit: Units;
 
   get weather(): Weather {
@@ -30,9 +29,9 @@ export class DetalhesWeatherComponent {
   get unitSymbol() {
     return unitToSymbol(this.unit);
   }
-
+/*
   unixToHourMinute(value: number): string {
     return moment.unix(value).tz(this.timeZone).format('HH:mm');
-  }
+  } */
 
 }
