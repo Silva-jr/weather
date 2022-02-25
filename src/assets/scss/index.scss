@@ -1,0 +1,292 @@
+.app-container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: linear-gradient(248.66deg, #48355b 0%, #91bef3 100%);
+  display: flex;
+  &-main {
+    width: 100%;
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    .icon {
+      margin-left: auto;
+    }
+    .local-weather {
+      width: 100%;
+      padding: 0 4rem;
+      &-graus {
+        display: flex;
+        //align-items: center;
+        span:first-child {
+          font-size: 164px;
+          font-weight: 100;
+          line-height: 100%;
+        }
+        span:last-child {
+          font-size: 3rem;
+          font-weight: 100;
+          top: 100%;
+          bottom: 30%;
+        }
+      }
+      &-date {
+        width: 87%;
+        padding: 3rem 0;
+        font-size: 2rem;
+        gap: 3;
+        align-items: center;
+        p {
+          line-height: 4rem;
+        }
+        &-details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+    .weather-display {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+      .weather-week-next {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        border: 0.1rem solid white;
+        font-size: 4rem;
+        padding: 2rem;
+        width: 25%;
+        justify-content: center;
+        .weather-of-day {
+          .week-info {
+            display: flex;
+          }
+          img {
+            margin-top: 3rem;
+          }
+          p {
+            margin-top: 3rem;
+          }
+        }
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+      .weather-week {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        //filter: blur(1.13852px);
+        border-radius: 1rem;
+        border: 0.1rem solid white;
+        font-size: 4rem;
+        padding: 2rem;
+        width: 25%;
+        justify-content: center;
+        .weather-of-day {
+          .week-info {
+            display: flex;
+          }
+          img {
+            margin-top: 3rem;
+          }
+          p {
+            margin-top: 3rem;
+          }
+        }
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+  &-asside {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      100% 100% at 0% 0%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(42px);
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 4rem 6rem;
+      justify-content: space-between;
+      input[type="text"] {
+        width: 30%;
+        padding: 8px 12px;
+        margin: 8px 0;
+        display: inline !important;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: linear-gradient(
+          116.79deg,
+          rgba(255, 255, 255, 0.48) 0%,
+          rgba(255, 255, 255, 0.12) 99.45%
+        );
+        color: #fff;
+        -webkit-appearance: none;
+        outline: none;
+        &:focus{
+          background-color: #fff;
+          color: #000;
+        }
+        &::placeholder{
+          color: #fff;
+        }
+      }
+      &-right-text {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      &-left-text {
+        width: 48px;
+        height: 49px;
+        background: linear-gradient(
+          116.79deg,
+          rgba(255, 255, 255, 0.48) 0%,
+          rgba(255, 255, 255, 0.12) 99.45%
+        );
+        backdrop-filter: blur(100px);
+        border-radius: 2rem;
+        text-align: center;
+        img {
+          position: absolute;
+          top: 28%;
+          right: 23%;
+          width: 23px;
+          height: 23px;
+          &:hover {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .hour-information {
+      width: 100%;
+      padding: 3rem 6rem;
+      font-size: 1.4rem;
+      display: flex;
+      &-clock {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: calc(50% - 210px / 2 - 105px);
+        h2 {
+          padding: 2rem 0;
+        }
+        .clock {
+          width: 95px;
+          height: 180px;
+          left: 54px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.26);
+          border-radius: 10rem;
+          img {
+            width: 68.65px;
+            height: 34.73px;
+            margin-left: 1rem;
+            margin-top: 20.46px;
+          }
+          .hour-text {
+            margin-top: 3rem;
+            line-height: 3rem;
+            p:first-child {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+      &-golden {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          padding: 2rem 0;
+        }
+        .clock {
+          width: 110px;
+          height: 210px;
+          left: calc(50% - 130px / 2 - 4px);
+          background: rgba(255, 255, 255, 0.26);
+          border-radius: 100px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          img {
+            width: 68.65px;
+            height: 34.73px;
+            margin-left: 2rem;
+            margin-top: 20.46px;
+          }
+          .hour-text {
+            margin-top: 4rem;
+            line-height: 3rem;
+            p:first-child {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .separator {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6rem;
+      div:first-child {
+        height: 0.1rem;
+        width: 90%;
+        border: 0.6px solid white;
+      }
+      div:last-child {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.23);
+        border-radius: 5rem;
+        font-size: 1.8rem;
+        text-align: center;
+        p {
+          margin-top: 22%;
+        }
+      }
+    }
+    .weather-quality {
+      width: 100%;
+      padding: 4rem 6rem;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      &-air {
+        text-align: center;
+        h2 {
+          padding: 2rem 0;
+        }
+        .text {
+          margin-top: -22%;
+        }
+      }
+    }
+  }
+}

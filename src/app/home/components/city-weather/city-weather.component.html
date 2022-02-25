@@ -1,0 +1,32 @@
+<div class="app-container-main">
+  <div class="icon">
+    <img src="./assets/image/chance.png" alt="">
+  </div>
+  <div class="local-weather">
+    <img [src]="weatherIcon">
+    <div class="local-weather-graus">
+      <span>{{cityWeather?.weather?.temp}}</span>
+      <span>ºC </span>
+    </div>
+    <div class="local-weather-date">
+      <H2> {{cityName }} </H2>
+      <p>{{cityWeather?.weather.description}}</p>
+      <p></p>
+      <div class="local-weather-date-details">
+        <img src="./assets/image/wind-direction-icon.png" alt="">
+        <p>Vento {{cityWeather?.weather?.wind?.speed}} km/h </p> |
+        <img src="./assets/image/chuva-icon.png" alt="">
+        <p>Humidade {{cityWeather?.weather?.humidity}}% </p> |
+        <img src="./assets/image/term.png" alt="">
+        <p>Sensão térmica {{cityWeather?.weather.feelsLike}}</p>
+        <!--  <img src="./assets/image/rain.png" alt="">
+        <p>Chuva 0.2%</p> -->
+      </div>
+    </div>
+
+
+    <app-detalhes-weather ></app-detalhes-weather>
+
+  </div>
+
+</div>
