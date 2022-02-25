@@ -9,7 +9,10 @@
       <span>ºC </span>
     </div>
     <div class="local-weather-date">
-      <H2> {{cityName }} </H2>
+      <div class="location">
+        <img src="./assets/image/location.png" alt="">
+        <H2> {{cityName }} </H2>
+      </div>
       <p>{{cityWeather?.weather.description}}</p>
       <p></p>
       <div class="local-weather-date-details">
@@ -25,7 +28,7 @@
     </div>
 
 
-    <app-detalhes-weather ></app-detalhes-weather>
+    <app-detalhes-weather></app-detalhes-weather>
 
   </div>
 

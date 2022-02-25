@@ -36,6 +36,10 @@
         font-size: 2rem;
         gap: 3;
         align-items: center;
+        .location {
+          display: flex;
+          align-items: center;
+        }
         p {
           line-height: 4rem;
         }
@@ -121,58 +125,59 @@
       align-items: center;
       padding: 4rem 6rem;
       justify-content: space-between;
-      input[type="text"] {
-        width: 30%;
-        padding: 8px 12px;
-        margin: 8px 0;
-        display: inline !important;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background: linear-gradient(
-          116.79deg,
-          rgba(255, 255, 255, 0.48) 0%,
-          rgba(255, 255, 255, 0.12) 99.45%
-        );
-        color: #fff;
-        -webkit-appearance: none;
-        outline: none;
-        &:focus{
-          background-color: #fff;
-          color: #000;
-        }
-        &::placeholder{
-          color: #fff;
-        }
-      }
       &-right-text {
         display: flex;
         align-items: center;
-        gap: 4rem;
+        //gap: 4rem;
         h2 {
           font-size: 2rem;
         }
-      }
-      &-left-text {
-        width: 48px;
-        height: 49px;
-        background: linear-gradient(
-          116.79deg,
-          rgba(255, 255, 255, 0.48) 0%,
-          rgba(255, 255, 255, 0.12) 99.45%
-        );
-        backdrop-filter: blur(100px);
-        border-radius: 2rem;
-        text-align: center;
-        img {
-          position: absolute;
-          top: 28%;
-          right: 23%;
-          width: 23px;
-          height: 23px;
-          &:hover {
-            width: 26px;
-            height: 26px;
-            cursor: pointer;
+        input[type="text"] {
+          width: 60%;
+          padding: 8px 12px;
+          margin: 8px 0;
+          display: inline !important;
+          border: 1px solid #ccc;
+          border-radius: .4rem 0rem 0 .4rem ;
+          background: linear-gradient(
+            116.79deg,
+            rgba(255, 255, 255, 0.48) 0%,
+            rgba(255, 255, 255, 0.12) 99.45%
+          );
+          color: #fff;
+          -webkit-appearance: none;
+          outline: none;
+          &:focus {
+            background-color: #fff;
+            color: #000;
+          }
+          &::placeholder {
+            color: #fff;
+          }
+        }
+        button {
+          width: 48px;
+          height: 34px;
+          background: linear-gradient(
+            116.79deg,
+            rgba(255, 255, 255, 0.48) 0%,
+            rgba(255, 255, 255, 0.12) 99.45%
+          );
+          backdrop-filter: blur(100px);
+          border: none;
+          border-radius: 0rem .4rem .4rem 0rem;
+          text-align: center;
+          img {
+            position: absolute;
+            top: 20%;
+            right: 23%;
+            width: 23px;
+            height: 23px;
+            &:hover {
+              width: 26px;
+              height: 26px;
+              cursor: pointer;
+            }
           }
         }
       }
