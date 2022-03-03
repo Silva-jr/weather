@@ -15,7 +15,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
       type="pacman"
       [fullScreen]="true"
     >
-      Loading...
+      <h2 style="font-size: 1.6rem;">Carregando...</h2>
     </ngx-spinner>
   `,
 })
