@@ -1,8 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { AppState } from 'src/app/shared/state/app.reducer';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CityDailyWeather } from 'src/app/shared/models/weather.model';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as fromDetailsActions from '../../state/details.actions';
+import * as fromDetailsSelectors from '../../state/details.selectors';
+import * as fromConfigSelectors from '../../../shared/state/config/config.selectors';
 import { Units } from 'src/app/shared/models/units.enum';
-import { DailyWeather, Weather } from 'src/app/shared/models/weather.model';
-import { unitToSymbol } from 'src/app/shared/utils/units.utils';
-import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'app-detalhes-weather',
@@ -10,28 +14,27 @@ import * as moment from 'moment-timezone';
   styleUrls: ['./detalhes-weather.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DetalhesWeatherComponent {
-  @Input() dailyWeather: DailyWeather;
-  @Input() unit: Units;
+export class DetalhesWeatherComponent implements OnInit {
+  details$: Observable<CityDailyWeather>;
+  loading$: Observable<boolean>;
+  error$: Observable<boolean>;
+  unit$: Observable<Units>;
 
-  get weather(): Weather {
-    return this.dailyWeather.weather;
+  constructor(private store: Store<AppState>) {}
+
+  ngOnInit(): void {
+    this.store.dispatch(fromDetailsActions.loadWeatherDetails());
+    this.details$ = this.store.pipe(
+      select(fromDetailsSelectors.selectDetailsEntity)
+    );
+    this.loading$ = this.store.pipe(
+      select(fromDetailsSelectors.selectDetailsLoading)
+    );
+    this.error$ = this.store.pipe(
+      select(fromDetailsSelectors.selectDetailsError)
+    );
+
+    this.unit$ = this.store.pipe(select(fromConfigSelectors.selectUnitConfig));
+    console.log(this.details$)
   }
-
-  get date(): string {
-    return moment.unix(this.dailyWeather.date).format('DD MMM - dddd');
-  }
-
-  get icon(): string {
-    return `http://openweathermap.org/img/wn/${this.weather.icon}@2x.png`;
-  }
-
-  get unitSymbol() {
-    return unitToSymbol(this.unit);
-  }
-/*
-  unixToHourMinute(value: number): string {
-    return moment.unix(value).tz(this.timeZone).format('HH:mm');
-  } */
-
 }

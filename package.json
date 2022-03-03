@@ -25,6 +25,7 @@
     "@ngrx/store-devtools": "^9.2.0",
     "js-search": "^2.0.0",
     "moment-timezone": "^0.5.34",
+    "ngx-spinner": "^11.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

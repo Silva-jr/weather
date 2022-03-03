@@ -1,6 +1,11 @@
 <section class="app-container">
+  <jv-loader *ngIf="loading$ | async"></jv-loader>
   <div>
+    <div *ngIf="!(loading$ | async) && !(error$ | async) && !!cityWeather"></div>
     <app-city-weather [cityWeather]="cityWeather" [unit]="unit$ | async"></app-city-weather>
+  </div>
+  <div *ngIf="!(loading$ | async) && error$ | async">
+    <a>Tentar novamente</a>
   </div>
 
   <aside class="app-container-asside">
@@ -24,16 +29,7 @@
           </div>
         </div>
       </div>
-      <!--      <div class="hour-information-golden">
-        <h2>Golden Hour</h2>
-        <div class="clock">
-          <img src="./assets/image/relogio.png" alt="">
-          <div class="hour-text">
-            <p>6:00 AM</p>
-            <p>6:49 PM</p>
-          </div>
-        </div>
-      </div> -->
+
       <div class="hour-information-clock">
         <h2>Por do Sol</h2>
         <div class="clock">

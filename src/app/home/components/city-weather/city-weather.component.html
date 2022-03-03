@@ -1,12 +1,14 @@
 <div class="app-container-main">
   <div class="icon">
-    <img src="./assets/image/chance.png" alt="">
+    <input [(ngModel)]="selected" type="checkbox" value="1" id="switch-toggle" class="switch-toggle-checkbox">
+    <label for="switch-toggle" class="switch-toggle"><span class="switch-toggle-on">F</span><span
+        class="switch-toggle-off">C</span></label>
   </div>
   <div class="local-weather">
     <img [src]="weatherIcon">
     <div class="local-weather-graus">
       <span>{{cityWeather?.weather?.temp}}</span>
-      <span>ºC </span>
+      <span>{{unitSymbol}} </span>
     </div>
     <div class="local-weather-date">
       <div class="location">
@@ -28,8 +30,8 @@
     </div>
 
 
-      <app-detalhes-weather >
-      </app-detalhes-weather>
+    <app-detalhes-weather>
+    </app-detalhes-weather>
 
   </div>
 
