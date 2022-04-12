@@ -22,6 +22,7 @@
 # Build :)
 - $ npm install / yarn install<br>
 - $ ng serve
+- $ adicionar uma chave na apiKey <a href="https://openweathermap.org/api"> Link </a>
 
 
 # Design:
