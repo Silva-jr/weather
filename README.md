@@ -1,27 +1,33 @@
-# Weather
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+<br />
+<p align="center">
+  <a href="http://www.freepik.com">
+    <img src="https://user-images.githubusercontent.com/63254680/162933739-94aec1e6-af16-4e35-9c4f-4b30703fce52.png" alt="Logo" width="250" height="200">
+  </a>
 
-## Development server
+  <h3 align="center">Day Weather</h3>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  <p align="center">
+    Site para consulta de meteorologia
+       <br />
+    <br />
+    <a href="https://dayweather.netlify.app/?lat=-8.8368&lon=13.2343">Site</a>
+    ·
+    <a href="https://www.linkedin.com/in/josé-silva12/">Contact</a>
+  </p>
+</p>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+# Build :)
+- $ npm install / yarn install<br>
+- $ ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# Design:
+Imagens disponíveis na pasta `./assets`<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Font family:
+- Roboto
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Created by  <a href="https://github.com/Silva-jr">José da Silva</a> :)
