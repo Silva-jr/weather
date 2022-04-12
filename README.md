@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="http://www.freepik.com">
-    <img src="https://user-images.githubusercontent.com/63254680/162933739-94aec1e6-af16-4e35-9c4f-4b30703fce52.png" alt="Logo" width="250" height="200">
+    <img src="https://user-images.githubusercontent.com/63254680/162933739-94aec1e6-af16-4e35-9c4f-4b30703fce52.png" alt="Logo" width="250" height="150">
   </a>
 
   <h3 align="center">Day Weather</h3>
