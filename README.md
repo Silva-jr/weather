@@ -1,4 +1,3 @@
-
 <br />
 <p align="center">
   <a href="http://www.freepik.com">
@@ -17,18 +16,18 @@
   </p>
 </p>
 
-
-
 # Build :)
+
 - $ npm install / yarn install<br>
 - $ ng serve
 - $ adicionar uma chave na apiKey <a href="https://openweathermap.org/api"> Link </a>
 
-
 # Design:
+
 Imagens disponíveis na pasta `./assets`<br>
 
 # Font family:
+
 - Roboto
 
-Created by  <a href="https://github.com/Silva-jr">José da Silva</a> :)
+Created by <a href="https://github.com/Silva-jr">José da Silva</a> :)
